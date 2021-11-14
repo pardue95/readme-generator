@@ -2,36 +2,38 @@
 const inquirer = require('inquirer');
 
 // TODO: Create an array of questions for user input
-const questions = [{
-    type: 'input',
-    name: 'name',
-    message: 'What is your name? (Required)',
-    validate: nameInput => {
-      if (nameInput) {
-        return true;
-      } else {
-        console.log('Please enter your name!');
-        return false;
-      }
-    }
-  },
-  {
-    type: 'input',
-    name: 'github',
-    message: 'Enter your GitHub Username (Required)',
-    validate: githubInput => {
-      if (githubInput) {
-        return true;
-      } else {
-        console.log('Please enter your GitHub username!');
-        return false;
-      }
-    }
-  }];
+const questions = []
+
 
 
   const promptUser = () => {
     return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Enter your GitHub Username (Required)',
+            validate: githubInput => {
+              if (githubInput) {
+                return true;
+              } else {
+                console.log('Please enter your GitHub username!');
+                return false;
+              }
+            }
+          },
+          {
+            type: 'input',
+            name: 'email',
+            message: 'Enter your email address (Required)',
+            validate: emailInput => {
+              if (emailInput) {
+                return true;
+              } else {
+                console.log('Please enter your email address!');
+                return false;
+              }
+            }
+          },
       {
         type: 'input',
         name: 'title',
@@ -85,30 +87,35 @@ const questions = [{
         }
       },
       {
-        type: 'input',
-        name: 'usage',
-        message: 'Provide instructions and examples for use (Required)',
-        validate: usageInput => {
-          if (usageInput) {
-            return true;
-          } else {
-            console.log('Please provide instructions and examples for use!');
-            return false;
-          }
-        }
-      },
-      {
         type: 'confirm',
-        name: 'confirmAbout',
-        message: 'Would you like to enter some information about yourself for an "About" section?',
+        name: 'confirmCollaborators',
+        message: 'Would you like to list any collaborators, third-party assets or tutorials?',
         default: true
       },
       {
         type: 'input',
-        name: 'about',
-        message: 'Provide some information about yourself:',
-        when: ({ confirmAbout }) => confirmAbout
-      }
+        name: 'collaborators',
+        message: 'Provide some information about your collaborators, third-party assets or tutorials:',
+        when: ({ confirmCollaborators }) => confirmCollaborators
+      },
+      {
+        type: 'confirm',
+        name: 'confirmTests',
+        message: 'Do you have test for your applciation?',
+        default: true
+      },
+      {
+        type: 'input',
+        name: 'tests',
+        message: 'Provide some information about your test:',
+        when: ({ confirmTests }) => confirmTests
+      },
+      {
+        type: 'list',
+        message: "Choose a license for your project.",
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        name: 'license'
+    }
     ]);
   };
 
