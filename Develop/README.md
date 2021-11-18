@@ -1,8 +1,8 @@
-# d
-  ![Github licence](http://img.shields.io/badge/license-GNU AGPLv3-blue.svg)
+# g
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   ## Description 
-  d
+  g
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -14,5 +14,5 @@
   ## Installation 
   undefined
   ## Usage 
-  d
+  g
 
