@@ -1,8 +1,7 @@
-# g
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  
+# s
+  ![Github licence](http://https://img.shields.io/badge/license-GNU-AGPLv3-blue.svg)
   ## Description 
-  g
+  s
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -12,7 +11,14 @@
   * [Questions](#questions)
   
   ## Installation 
-  undefined
+  s
   ## Usage 
-  g
-
+  s
+  ## License
+  GNU-AGPLv3
+  ## Contributers
+  false
+  ## Tests
+  undefined
+  ## Questions
+  If you have any questions about this projects, please contact me directly at s. You can view more of my projects at https://github.com/pardue95	.
