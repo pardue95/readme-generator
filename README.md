@@ -11,6 +11,9 @@
   * [Questions](#questions)
   
   ## Installation 
+![demo](https://user-images.githubusercontent.com/85760640/142912691-7235f159-2113-4506-b8e3-2506bee755d4.jpg)
+
+
   To install this app you will need to run npm install for the following dependencies in your CLI, inquirer and fs. This will allow the question prompts from the CLI for you to create your README.md.
   ## Usage 
  Video of the app in action
